@@ -1,4 +1,3 @@
-
 class Calculator:
 
     @staticmethod
@@ -16,4 +15,5 @@ class Calculator:
             negatives = [i for i in values if i < 0]
             if negatives:
                 raise SyntaxError("Negatives not allowed: " + str(negatives))
-            return sum(values)
+            values_within_limit = [i for i in values if 1000 > i > 0]
+            return sum(values_within_limit)

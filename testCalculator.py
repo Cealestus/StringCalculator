@@ -15,7 +15,12 @@ testValues = [
     ["//@@\n2@@5@@12", 19],
     ["-1,5", SyntaxErrorString],
     ["5,10,-12,-100", SyntaxErrorString],
-    ["//%\n-5%6%12", SyntaxErrorString]
+    ["//%\n-5%6%12", SyntaxErrorString],
+    ["2, 1001", 2],
+    ["5, 10000, -1", SyntaxErrorString],
+    ["125, 2000, 5", 130],
+    ["//*\n6*3344*4", 10],
+    ["//^^&\n1^^&2^^&50", 53]
 ]
 
 calculator = Calculator()
