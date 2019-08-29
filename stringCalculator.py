@@ -6,5 +6,6 @@ class Calculator:
         if not numbers:
             return 0
         else:
-            values = list(map(int, numbers.split(",")))
+            numbers = numbers.replace('\n', '')
+            values = list(map(int, numbers.split(',')))
             return sum(values)
